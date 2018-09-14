@@ -2,14 +2,58 @@ var about = new Vue({
   el: '#about',
   data: {
     user:  [
-      (
-        name: '',
-        address: '',
-        phonenumber: '',
-        email: '',
-        birthday: '',
-        age: '',
-      )
+      {
+      gender: "",
+      name: {
+      title: "",
+      first: "",
+      last: ""
+      },
+      location: {
+      street: "",
+      city: "",
+      state: "",
+      postcode: 0,
+      coordinates: {
+      latitude: "",
+      longitude: ""
+      },
+      timezone: {
+      offset: "",
+      description: ""
+      }
+      },
+      email: "",
+      login: {
+      uuid: "",
+      username: "",
+      password: "",
+      salt: "",
+      md5: "",
+      sha1: "",
+      sha256: ""
+      },
+      dob: {
+      date: "",
+      age: 0
+      },
+      registered: {
+      date: "",
+      age: 0
+      },
+      phone: "",
+      cell: "",
+      id: {
+      name: "",
+      value: ""
+      },
+      picture: {
+      large: "https://randomuser.me/api/portraits/women/76.jpg",
+      medium: "https://randomuser.me/api/portraits/med/women/76.jpg",
+      thumbnail: "https://randomuser.me/api/portraits/thumb/women/76.jpg"
+      },
+      nat: ""
+      }
     ]
 },
 
