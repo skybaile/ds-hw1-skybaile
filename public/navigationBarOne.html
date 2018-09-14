@@ -1,0 +1,152 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Header cells</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/style.css" />
+	<style>
+		table {
+			margin-bottom: 2em;
+		}
+
+		td, th {
+			border: 1px solid #999;
+			padding: 0.1em 1em;
+		}
+	</style>
+</head>
+<body>
+
+  <h1>Country Information</h1>
+
+	<nav>
+	  <ul class="nav navbar-light bg-light">
+	    <li><a class="navbar-brand" href="Index.html">Home</a></li>
+	    <li><a class="navbar-brand" href="NavigationBarTwo.html">About</a></li>
+	    <li><a class="navbar-brand" href="navigationBarOne.html">Travel</a></li>
+
+
+
+
+
+	</nav>
+<br />
+
+<div>
+
+	 <table id="taskTable" class="table table-striped">
+	<thead>
+		<tr class="thead-dark">
+			<th>Country</th>
+			<th>Place</th>
+			<th>Prize</th>
+			<th>Name</th>
+		</tr>
+	</thead>
+
+<tbody>
+		<tr>
+			<td>Finland</td>
+			<td>1</td>
+			<td>$1,000</td>
+			<td>Cindy</td>
+
+		</tr>
+		<tr>
+			<td>Germany</td>
+			<td>2</td>
+			<td>$2,000</td>
+			<td>Chad</td>
+
+		</tr>
+		<tr>
+			<td>Italy</td>
+			<td>3</td>
+			<td>$3,000</td>
+			<td>Caleb</td>
+
+		</tr>
+		<tr>
+			<td>Portugal</td>
+			<td>4</td>
+			<td>$4,000</td>
+			<td>Cameron</td>
+
+		</tr>
+		<tr>
+			<td>Portugal</td>
+			<td>5</td>
+			<td>$5,000</td>
+			<td>Cat</td>
+
+		</tr>
+
+</tbody>	
+
+	 </table>
+
+	 </div>
+
+<br />
+<h3 class="info"> Update Information Here:</h3>
+<span class="border"></span>
+   <form action="Navigation3.html" method="POST">
+		 <div class="form-group" "form-inline">
+       <label for="Country">Add Country: </label>
+       <input type="Country" id="Country" name="Country">
+       <br>
+		</div>
+		<div class="form-group" "form-inline">
+       <label for="Continent">Select Continent:</label>
+       <select name="Continent">
+           <option>--None--</option>
+           <option value="Asia">Asia</option>
+           <option value="Africa">Africa</option>
+           <option value="Europe">Europe</option>
+       </select>
+		 </div/>
+       <br>
+		<div class="form-group" "form-inline">
+			 <label for="Place">Select Place:</label>
+			 <select name="Place">
+					 <option>--None--</option>
+					 <option value="1">1</option>
+					 <option value="2">2</option>
+					 <option value="3">3</option>
+					 <option value="4">4</option>
+					 <option value="5">5</option>
+			 </select>
+			 <div/>
+			 <br />
+		<div class="form-group" "form-inline">
+			 <label for="Prize">Add Prize Amount: </label>
+			 <input type="Prize" id="Prize" name="Prize">
+			 <br>
+		<div/>
+		<div class="form-group" "form-inline">
+			 <label for="Name">Add Name: </label>
+			 <input type="Name" id="Name" name="Name">
+			 <br>
+		<div/>
+       <button formaction="Navigation3.html">Submit</button>
+
+   </form>
+	 <div>
+
+<br/>
+
+</br/>
+
+		<a href="https://en.wikipedia.org/wiki/File:Globe_Atlantic.svg">
+	<img src="img/Earth.jpg" alt="Globe"> </a>
+
+</div>
+
+ <script src="js/tablesort.min.js" ></script>
+ <script>
+  new Tablesort(document.getElementById('taskTable'));
+</script>
+
+</body>
+</html>
