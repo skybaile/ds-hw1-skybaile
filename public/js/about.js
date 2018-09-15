@@ -62,14 +62,23 @@ methods: {
       .then( response => response.json() )
       .then( json => {about.user = json.results[0]} )
       .catch( err => {
-        console.log('TASK FETCH ERROR:');
+        console.log('USER FETCH ERROR:');
         console.log(err);
       })
     },
     pretty_date: function (d) {
       return moment(d).format('l')
 },
-  },
+buttonRefresh() {
+    fetch('https://www.randomuser.me/api/')
+    .then( response => response.json() )
+    .then( json => {about.user = json.results[0]} )
+    .catch( err => {
+      console.log('USER FETCH ERROR:');
+      console.log(err);
+    })
+  }
+},
 
 created () {
       this.fetchAbout();
