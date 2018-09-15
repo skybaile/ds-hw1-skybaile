@@ -48,9 +48,9 @@ var about = new Vue({
       value: ""
       },
       picture: {
-      large: "https://randomuser.me/api/portraits/women/76.jpg",
-      medium: "https://randomuser.me/api/portraits/med/women/76.jpg",
-      thumbnail: "https://randomuser.me/api/portraits/thumb/women/76.jpg"
+      large: "",
+      medium: "",
+      thumbnail: ""
       },
       nat: ""
       }
