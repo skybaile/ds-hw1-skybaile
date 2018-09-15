@@ -1,7 +1,7 @@
 var about = new Vue({
   el: '#about',
   data: {
-    user:  [
+    user:
       {
       gender: "",
       name: {
@@ -54,19 +54,25 @@ var about = new Vue({
       },
       nat: ""
       }
-    ]
 },
 
 methods: {
     fetchAbout () {
-      fetch('https://raw.githubusercontent.com/tag/iu-msis/dev/public/p1-tasks.json')
+      fetch('https://www.randomuser.me/api/')
       .then( response => response.json() )
-      .then( json => {about.user = json} )
+      .then( json => {about.user = json.results[0]} )
       .catch( err => {
         console.log('TASK FETCH ERROR:');
         console.log(err);
       })
     },
+    pretty_date: function (d) {
+      return moment(d).format('l')
+},
+  },
+
+created () {
+      this.fetchAbout();
     }
 
 })

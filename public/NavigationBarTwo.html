@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css" />
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="js/about.js"></script>
 </head>
 <body>
 
@@ -30,31 +28,41 @@
   <a href="https://en.wikipedia.org/wiki/File:Globe_Atlantic.svg">
   <img src="img/58.jpg" alt="Me" class="center"/> </a>
 
-<div class="float-left">
-  <p>
-    Address: <br />
-    6713 Park Rd <br />
-    Colombus, IN  <br />
-    United States
+<div class="float-left" id=about>
+    <p>
+      Name:
+      {{ user.name.title }}
+      {{ user.name.first }}
+      {{ user.name.last }}
+    </p>
+    <p>
+      Address:
+      {{ user.location.street }},
+      {{ user.location.city}},
+      {{ user.location.state}},
+      {{ user.location.postcode}}
   </p>
   <p>
-    Phone Number: <br />
-    (208)-562-9193
+    Phone Number:
+    {{user.phone}}
   </p>
   <p>
-    Email: <br />
-    <a href="mailto:logan.hill51@example.com">Logan Hill</a><br>
+    Email:
+    {{user.email}}
   </p>
   <p>
-    Birthday: <br />
-    10/5/1979
+    Birthday:
+    {{pretty_date(user.dob.date)}}
   </p>
   <p>
-    Age: <br />
-    39
+    Age:
+    {{ user.dob.age}}
   </p>
   <div/>
 
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="js/about.js"></script>
 
 </body>
 </html>
