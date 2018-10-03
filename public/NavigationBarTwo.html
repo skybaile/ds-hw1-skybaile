@@ -1,66 +1,61 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>NavigationBarTwo</title>
-
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style.css" />
-
-</head>
-<body>
-
-  <h1 id="user_name"> </h1>User Information</h1>
-
-  <nav>
-    <ul class="nav navbar-light bg-light">
-      <li><a class="navbar-brand" href="Index.html">Home</a></li>
-      <li><a class="navbar-brand" href="NavigationBarTwo.html">About</a></li>
-      <li><a class="navbar-brand" href="navigationBarOne.html">Travel</a></li>
-  </nav>
-<div>
-  <a href="https://en.wikipedia.org/wiki/File:Globe_Atlantic.svg"> </a>
-
-</div>
-<div class="float-left" id=about>
-    <img v-bind:src="''+user.picture.large+''" alt="User" class="img-largepicture">
-    <p>
-      Name:
-      {{ user.name.title }}
-      {{ user.name.first }}
-      {{ user.name.last }}
-    </p>
-    <p>
-      Address:
-      {{ user.location.street }},
-      {{ user.location.city}},
-      {{ user.location.state}},
-      {{ user.location.postcode}}
-  </p>
-  <p>
-    Phone Number:
-    {{user.phone}}
-  </p>
-  <p>
-    Email:
-    {{user.email}}
-  </p>
-  <p>
-    Birthday:
-    {{pretty_date(user.dob.date)}}
-  </p>
-  <p>
-    Age:
-    {{ user.dob.age}}
-  </p>
-  <div/>
-
-  <button v-on:click="buttonRefresh">Refresh</button>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
-  <script src="js/about.js"></script>
-
-</body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>NavigationBarTwo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <main>
+            <h1 id="user_name"> </h1>
+            User Information</h1>
+            <nav>
+                <ul class="nav navbar-light bg-light">
+                <li><a class="navbar-brand" href="Index.html">Home</a></li>
+                <li><a class="navbar-brand" href="NavigationBarTwo.html">About</a></li>
+                <li><a class="navbar-brand" href="navigationBarOne.html">Travel</a></li>
+            </nav>
+            <div>
+                <a href="https://en.wikipedia.org/wiki/File:Globe_Atlantic.svg"> </a>
+            </div>
+            <div class="float-left" id=about>
+            <img v-bind:src="''+user.picture.large+''" alt="User" class="img-largepicture">
+            <p>
+                Name:
+                {{ user.name.title }}
+                {{ user.name.first }}
+                {{ user.name.last }}
+            </p>
+            <p>
+                Address:
+                {{ user.location.street }},
+                {{ user.location.city}},
+                {{ user.location.state}},
+                {{ user.location.postcode}}
+            </p>
+            <p>
+                Phone Number:
+                {{user.phone}}
+            </p>
+            <p>
+                Email:
+                {{user.email}}
+            </p>
+            <p>
+                Birthday:
+                {{pretty_date(user.dob.date)}}
+            </p>
+            <p>
+                Age:
+                {{ user.dob.age}}
+            </p>
+            <div/>
+            <button v-on:click="fetchAbout();">Refresh</button>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src="js/about.js"></script>
+    </body>
 </html>
