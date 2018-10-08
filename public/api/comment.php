@@ -4,7 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
   $comment = new Comment($POST);
   $comment->create();
-  echo jason_encode($comment);
+  echo json_encode($comment);
 
   exit;
 }
