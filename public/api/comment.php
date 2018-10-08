@@ -1,7 +1,11 @@
 <?php
 require '../../app/common.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  require 'commentPost.php';
+
+  $comment = new Comment($POST);
+  $comment->create();
+  echo jason_encode($comment);
+
   exit;
 }
 $commentArr = Comment::fetchAll();
