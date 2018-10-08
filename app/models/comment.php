@@ -9,7 +9,6 @@ class Comment
     $this->id = intval($data['id']);
     $this->comment = $data['comment'];
   }
-
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
     $sql = 'INSERT Homework (id, comment)
