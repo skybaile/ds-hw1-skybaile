@@ -6,17 +6,17 @@ class Comment
   public $comment;
 
   public function __construct($data) {
-    $this->id = intval($data['id']);
+    $this->id = isset($data['id']) ? intval($data['id']) : null);
     $this->comment = $data['comment'];
   }
   public function create() {
     $db = new PDO(DB_SERVER, DB_USER, DB_PW);
-    $sql = 'INSERT Homework (id, comment)
-            Values (?, ?)';
+    $sql = 'INSERT Homework (comment)
+            Values (?)';
     $statement = $db->prepare($sql);
     $success = $statement->execute([
-      $this->id,
       $this->comment
+
     ]);
     $this->id = $db->lastInsertId();
   }
@@ -27,7 +27,7 @@ class Comment
 
     // 2. Prepare query
     $sql = 'SELECT * FROM Homework';
-    
+
     $statement = $db->prepare($sql);
 
     // 3. Run query
