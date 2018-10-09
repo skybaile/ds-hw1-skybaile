@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 //  1. Go to DB and get all work
 $commentArr = Comment::fetchAll();
-\
+
 // 2. Convert to JSON
 $json = json_encode($commentArr, JSON_PRETTY_PRINT);
 
