@@ -43,7 +43,7 @@ var commentApp = new Vue({
       }
     },
 
-    fetch('api/comment.php')
+    fetchComments('api/comment.php')
     .then( response => response.json() )
     .then( json => {commentApp.comments = json} )
     .catch( err => {
