@@ -12,7 +12,7 @@ var commentApp = new Vue({
   },
 
   methods: {
-    handleWorkForm(e) {
+    handleCommentForm(e) {
     e.preventDefault();
 
     const s = JSON.stringify(this.commentForm);

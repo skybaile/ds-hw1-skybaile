@@ -17,6 +17,9 @@
 	</style>
 </head>
 <body>
+  <main id="commentMain" class="container-fluid">
+
+  </main>
 
   <h1>Comments</h1>
 
@@ -35,16 +38,17 @@
 
 <div>
 
-  <table class="table table-striped table-sm">
+  <table id="commentTable" class="table table-striped table-sm">
          <thead>
            <tr>
              <th>ID</th>
              <th>Comments</th>
            </tr>
          </thead>
-         <tbody v-for="comment in comments"
-         :key="w.id"
-         :id="'task-' + task.id + '-work-' + w.id">
+         <tbody id="commentTableBody">
+
+         </tbody>
+         <tr v-for="comment in comments">
            <td>{{comments.id}}</td>
            <td>{{comments.comment}}</td>
          </tbody>
@@ -56,7 +60,7 @@
 <h3 class="info"> Update Information Here:</h3>
 <span class="border"></span>
 
-<form class="form-inline">
+<form @sumbit.prevent="handleCommentForm" id="newCommentForm" class="form-inline">
   <label class="sr-only" for="inlineFormInputName2">Name</label>
   <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Comment">
 
