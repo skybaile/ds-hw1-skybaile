@@ -12,7 +12,7 @@ var commentApp = new Vue({
       const s = JSON.stringify(this.commentForm);
       console.log(s);
 
-      fetch('api/comment.php', {
+      fetch('../api/comment.php', {
         method: "POST",
         headers:{
           "Content-Type": "application/json; charset=utf-8"
@@ -26,7 +26,7 @@ var commentApp = new Vue({
         console.error(err);
       })
 
-      this.commentForm = this.getEmptyCommentForm();
+      //this.commentForm = this.getEmptyCommentForm();
     },
 
     getEmptyCommentForm() {
@@ -43,8 +43,8 @@ var commentApp = new Vue({
         console.error('COMMENT ERROR:');
         console.error(err);
       });
+    },
   },
-},
 
 created () {
   this.fetchComments();
