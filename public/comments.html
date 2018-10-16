@@ -47,10 +47,10 @@
     <br />
     <h3 class="info"> Update Information Here:</h3>
     <span class="border"></span>
-    <form @sumbit.prevent="handleCommentForm" id="newCommentForm" class="form-inline">
-      <label class="sr-only" for="inlineFormInputName2">Comment</label>
-      <input type="text" class="form-control mb-2 mr-sm-2" v-model="commentForm.comment" id="Comment" placeholder="Comment" required>
-      <button type="submit" id="sumbitNewComment" class="btn btn-primary mb-2">Submit</button>
+    <form @sumbit.prevent="handleCommentForm" id="newCommentForm">
+      <!--<label class="sr-only" for="inlineFormInputName2">Comment</label>-->
+      <input type="text" name="commentArea" class="form-control mb-2 mr-sm-2" v-model="commentForm.comment" id="comment">
+      <button id="sumbitNewComment" class="btn btn-primary mb-2">Submit</button>
     </form>
   </main>
 
