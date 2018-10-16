@@ -25,6 +25,15 @@ var commentApp = new Vue({
       },
       body: s
     })
+    .then( response => response.json() )
+    .then( json => {this.comments.push(json)})
+    .catch( err => {
+      console.error('WORK POST ERROR:');
+      console.error(err);
+})
+
+      this.commentForm = this.getEmptyCommentForm();
+    },
 
     getEmptyCommentForm() {
       return {
@@ -32,7 +41,8 @@ var commentApp = new Vue({
       }
     },
 
-    fetchComments('api/comment.php')
+    fetchComments() {
+    fetch ('api/comment.php')
     .then( response => response.json() )
     .then( json => {commentApp.comments = json} )
     .catch( err => {
@@ -40,10 +50,9 @@ var commentApp = new Vue({
       console.error(err);
     });
   },
-
 },
 
 created () {
-  console.log('inside created.');
   this.fetchComments();
-}
+  }
+})
