@@ -6,8 +6,8 @@ var commentApp = new Vue({
   },
 
   methods: {
-    handleCommentForm(e) {
-      e.preventDefault();
+
+    handleCommentForm() {
 
       const s = JSON.stringify(this.commentForm);
       console.log(s);
