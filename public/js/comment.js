@@ -29,11 +29,11 @@ var commentApp = new Vue({
       this.commentForm = this.getEmptyCommentForm();
     },
 
-/*    getEmptyCommentForm() {
+    getEmptyCommentForm() {
       return {
         comment:null
       }
-    },*/
+    },
 
     fetchComments() {
       fetch ('api/comment.php')
