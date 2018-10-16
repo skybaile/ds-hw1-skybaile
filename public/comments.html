@@ -20,7 +20,7 @@
 <body>
   <main id="commentMain" class="container-fluid">
 
-  </main>
+
 
   <h1>Comments</h1>
 
@@ -43,11 +43,10 @@
            </tr>
          </thead>
          <tbody id="commentTableBody">
-
-         </tbody>
          <tr v-for="comment in comments">
-           <td>{{comments.id}}</td>
-           <td>{{comments.comment}}</td>
+           <td>{{comment.id}}</td>
+           <td>{{comment.comment}}</td>
+         </tr>
          </tbody>
        </table>
 
@@ -58,14 +57,12 @@
 <span class="border"></span>
 
 <form @sumbit.prevent="handleCommentForm" id="newCommentForm" class="form-inline">
-  <label class="sr-only" for="inlineFormInputName2">Name</label>
-  <input type="text" class="form-control mb-2 mr-sm-2" id="inlineFormInputName2" placeholder="Comment">
+  <label class="sr-only" for="inlineFormInputName2">Comment</label>
+  <input type="text" class="form-control mb-2 mr-sm-2" v-model="commentForm.comment" id="Comment" placeholder="Comment" required>
 
-  <label class="sr-only" for="inlineFormInputGroupUsername2">Comment</label>
-
-
-  <button type="submit" class="btn btn-primary mb-2">Submit</button>
+  <button type="submit" id="sumbitNewComment" class="btn btn-primary mb-2">Submit</button>
 </form>
+  </main>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
